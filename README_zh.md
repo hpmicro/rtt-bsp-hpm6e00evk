@@ -13,6 +13,7 @@ HPM6E00EVK 开发板的 RT-Thread Studio 板级支持包
 - mcan_example
 - pwm_demo
 - timer_demo
+- tsn_lwip_tcpecho
 - uart_dma_demo
 - usb_device_generic_hid
 - usb_host_msc_udisk
