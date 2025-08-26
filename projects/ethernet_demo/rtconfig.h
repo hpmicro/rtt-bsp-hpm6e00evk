@@ -61,7 +61,7 @@
 #define RT_USING_FINSH
 #define FINSH_USING_MSH
 #define FINSH_THREAD_NAME "tshell"
-#define FINSH_THREAD_PRIORITY 20
+#define FINSH_THREAD_PRIORITY 8
 #define FINSH_THREAD_STACK_SIZE 4096
 #define FINSH_USING_HISTORY
 #define FINSH_HISTORY_LINES 5
@@ -149,6 +149,9 @@
 #define RT_LWIP_MEM_ALIGNMENT 4
 #define RT_LWIP_ICMP
 #define RT_LWIP_DNS
+#define RT_LWIP_DHCP
+#define IP_SOF_BROADCAST 1
+#define IP_SOF_BROADCAST_RECV 1
 
 /* Static IPv4 Address */
 
@@ -170,7 +173,6 @@
 #define RT_LWIP_TCPTHREAD_PRIORITY 10
 #define RT_LWIP_TCPTHREAD_MBOX_SIZE 8
 #define RT_LWIP_TCPTHREAD_STACKSIZE 4096
-#define LWIP_NO_TX_THREAD
 #define RT_LWIP_ETHTHREAD_PRIORITY 12
 #define RT_LWIP_ETHTHREAD_STACKSIZE 4096
 #define RT_LWIP_ETHTHREAD_MBOX_SIZE 16
@@ -319,6 +321,22 @@
 /* AT32 HAL & SDK Drivers */
 
 /* end of AT32 HAL & SDK Drivers */
+
+/* HC32 DDL Drivers */
+
+/* end of HC32 DDL Drivers */
+
+/* NXP HAL & SDK Drivers */
+
+/* end of NXP HAL & SDK Drivers */
+
+/* NUVOTON Drivers */
+
+/* end of NUVOTON Drivers */
+
+/* GD32 Drivers */
+
+/* end of GD32 Drivers */
 /* end of HAL & SDK Drivers */
 
 /* sensors drivers */
@@ -403,6 +421,7 @@
 
 #define SOC_HPM6E00
 #define BSP_USING_ENET_PHY_RTL8211
+#define LWIP_SUPPORT_CUSTOM_PBUF 1
 
 /* On-chip Peripheral Drivers */
 
@@ -426,9 +445,9 @@
 
 /* end of Segger SystemView Config */
 
-/* Hpmicro Interrupt Config */
+/* HPMicro Interrupt Config */
 
-/* end of Hpmicro Interrupt Config */
+/* end of HPMicro Interrupt Config */
 /* end of Hardware Drivers Config */
 
 #endif

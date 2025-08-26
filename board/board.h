@@ -220,8 +220,8 @@
 #define BOARD_APP_XDMA_IRQ  IRQn_XDMA
 #define BOARD_APP_HDMA_IRQ  IRQn_HDMA
 #define BOARD_APP_DMAMUX    HPM_DMAMUX
-#define TEST_DMA_CONTROLLER HPM_HDMA
-#define TEST_DMA_IRQ        IRQn_HDMA
+#define TEST_DMA_CONTROLLER HPM_XDMA
+#define TEST_DMA_IRQ        IRQn_XDMA
 
 /* APP PWM */
 #define BOARD_APP_PWM                   HPM_PWM1
@@ -681,6 +681,12 @@
 #define BOARD_FREERTOS_TIMER_IRQ      IRQn_GPTMR6
 #define BOARD_FREERTOS_TIMER_CLK_NAME clock_gptmr6
 
+#define BOARD_FREERTOS_TICK_SRC_PWM          HPM_PWM0
+#define BOARD_FREERTOS_TICK_SRC_PWM_IRQ      IRQn_PWM0
+#define BOARD_FREERTOS_TICK_SRC_PWM_CLK_NAME clock_pwm0
+#define BOARD_FREERTOS_TICK_SRC_PWM_COUNTER  pwm_counter_0
+#define BOARD_FREERTOS_TICK_SRC_PWM_SHADOW   PWMV2_SHADOW_INDEX(0)
+
 #define BOARD_FREERTOS_LOWPOWER_TIMER          HPM_PTMR
 #define BOARD_FREERTOS_LOWPOWER_TIMER_CHANNEL  1
 #define BOARD_FREERTOS_LOWPOWER_TIMER_IRQ      IRQn_PTMR
@@ -826,6 +832,7 @@ uint8_t board_get_led_pwm_off_level(void);
 void board_disable_output_rgb_led(uint8_t color);
 void board_enable_output_rgb_led(uint8_t color);
 void board_init_rgb_pwm_pins(void);
+uint32_t board_init_gptmr_clock(GPTMR_Type *ptr);
 
 #if defined(__cplusplus)
 }

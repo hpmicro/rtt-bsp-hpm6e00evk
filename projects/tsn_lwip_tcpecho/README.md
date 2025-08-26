@@ -78,10 +78,12 @@ C:\Users>ping 192.168.100.12
 
 - 在数据发送窗口编辑发送字符
 
-  <img src="./image-20250219153521211.png" width="80%" height="auto"> 
+  ![](image-20250219153521211.png) 
+  
+  
 
 
 - 观察回送数据
 
-  <img src="./image-20250219154301546.png" width="80%" height="auto"> 
+   ![](image-20250219154301546.png) 
 
