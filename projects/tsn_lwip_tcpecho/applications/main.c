@@ -76,7 +76,7 @@ void tcp_echo_thread(void *arg)
 
 void thread_entry(void *arg)
 {
-    while(1){
+    while(1) {
         app_led_write(0, APP_LED_ON);
         rt_thread_mdelay(500);
         app_led_write(0, APP_LED_OFF);
