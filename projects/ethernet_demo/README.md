@@ -6,17 +6,17 @@
 
 ## 硬件设置
 
-* 使用USB Type-C线缆连接PC USB端口和PWR DEBUG端口
-* 使用以太网线缆连接PC以太网端口和开发板RGMII或RMII端口
+- 使用USB Type-C线缆连接PC USB端口和PWR DEBUG端口
+- 使用以太网线缆连接PC以太网端口和开发板RGMII或RMII端口
 
 ## 软件设置
 
-* 使用flash_release编译运行，可以获得更好的网络性能
+- 使用flash_release编译运行，可以获得更好的网络性能
 
 ## 运行示例
 
-* 编译下载程序
-* 串口终端显示
+- 编译下载程序
+- 串口终端显示
 
 ```console
  \ | /
@@ -49,7 +49,7 @@ dns server #1: 0.0.0.0
 
 ```
 
-**注： 若DHCP开启，则DHCP状态为“DHCP_ENABLE”，需要将网口连接至路由器或具有DHCP服务的PC  **   
+**注： 若DHCP开启，则DHCP状态为“DHCP_ENABLE”，需要将网口连接至路由器或具有DHCP服务的PC  **
 
 ### 2. PING测试
 
@@ -128,7 +128,7 @@ ping: not found specified netif, using default netdev ET.
     [34472] W/iperf: client disconnected (192.168.100.5, 56599)
     ```
 
-    
+
 
 - **TCP客户端模式**
 
@@ -239,18 +239,18 @@ ping: not found specified netif, using default netdev ET.
 
     ```console
     msh />[259857] I/iperf: iperfd01: 471.7210 Mbps! lost:56588 total:257149
-    
+
     [264864] I/iperf: iperfd01: 533.4140 Mbps! lost:64208 total:291000
-    
+
     [269871] I/iperf: iperfd01: 538.0010 Mbps! lost:64748 total:293490
-    
+
     [274878] I/iperf: iperfd01: 527.6380 Mbps! lost:64146 total:288482
-    
+
     [281801] I/iperf: iperfd01: 46.2830 Mbps! lost:-2322562 total:-2295352
-    
+
     ```
-    
-    
+
+
 
 - UDP客户端模式
 
@@ -298,7 +298,7 @@ ping: not found specified netif, using default netdev ET.
     [344] 19.0-20.0 sec  85.6 MBytes   718 Mbits/sec  0.058 ms    0/61077 (0%)
     ```
 
-    
+
 
   - 观察MCU端结果
 
@@ -308,7 +308,7 @@ ping: not found specified netif, using default netdev ET.
 
     **注：此模式下，MCU端无统计信息输出，且无退出机制，需要按reset键重启MCU。**
 
-  
 
-  
+
+
 

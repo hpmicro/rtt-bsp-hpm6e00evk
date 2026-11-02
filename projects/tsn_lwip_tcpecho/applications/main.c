@@ -4,6 +4,7 @@
  * Change Logs:
  * Date         Author         Notes
  * 2025-03-31   Jiading        first version
+ * 2026-09-29   Jiading        print and stop this netbuf when netconn_write fails
  *
  */
 
@@ -63,7 +64,8 @@ void tcp_echo_thread(void *arg)
                     netbuf_data(buf, &data, &len);
                     err = netconn_write(newconn, data, len, NETCONN_COPY);
                     if (err != ERR_OK) {
-                        LWIP_ASSERT("tcpecho: netconn_write: error %s\n", lwip_strerr(err));
+                        rt_kprintf("tcpecho: netconn_write: %s\n", lwip_strerr(err));
+                        break;
                     }
                 } while (netbuf_next(buf) >= 0);
                 netbuf_delete(buf);
